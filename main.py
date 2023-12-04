@@ -4,8 +4,15 @@ from planning_poker import PlanningPoker
 import json
 
 
-
 def main():
+    
+    """
+    @fonction main
+    @brief Description of the class.
+
+    Détailler la description
+    """
+
     # Charger les tâches depuis le fichier backlog.json
     with open('backlog.json', 'r') as f:
         tasks = json.load(f)['taches']
