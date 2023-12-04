@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="182.73126mm"
+   height="372.9646mm"
+   viewBox="0 0 182.73126 372.9646"
    version="1.1"
    id="svg5"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
@@ -25,10 +25,10 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.35893113"
-     inkscape:cx="-650.54263"
-     inkscape:cy="487.55871"
+     inkscape:cx="-1298.2992"
+     inkscape:cy="488.95174"
      inkscape:window-width="1920"
-     inkscape:window-height="1007"
+     inkscape:window-height="1008"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -37,24 +37,19 @@
      id="defs2">
     <rect
        x="106.02361"
-       y="-375.75002"
-       width="790.38723"
-       height="418.46641"
+       y="-375.75003"
+       width="790.38721"
+       height="418.4664"
        id="rect5087" />
-    <rect
-       x="715.18161"
-       y="713.39841"
-       width="217.97501"
-       height="306.81869"
-       id="rect3793" />
   </defs>
   <g
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(651.5638,53.133456)">
     <g
        id="g4730"
-       transform="translate(13.512009,-30.637781)">
+       transform="translate(-655.08793,-56.673136)">
       <g
          id="g1425"
          transform="translate(-60.719115,-61.610814)">
@@ -153,7 +148,7 @@
     </g>
     <g
        id="g4748"
-       transform="translate(13.738212,-31.020481)">
+       transform="translate(-654.86172,-57.055836)">
       <circle
          style="fill:none;stroke:none;stroke-width:0.264583;stroke-opacity:1"
          id="path1141-1-9"
@@ -248,7 +243,7 @@
     </g>
     <g
        id="g4766"
-       transform="translate(-107.86955,63.089382)">
+       transform="translate(-776.46949,37.054027)">
       <circle
          style="fill:none;stroke:none;stroke-width:0.264583;stroke-opacity:1"
          id="path1141-1-9-3"
@@ -344,11 +339,11 @@
          xml:space="preserve"
          transform="matrix(0.26458333,0,0,0.26458333,362.97932,-105.04162)"
          id="text5085"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';white-space:pre;shape-inside:url(#rect5087);fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1" />
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';white-space:pre;shape-inside:url(#rect5087);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1" />
     </g>
     <g
        id="g4766-4"
-       transform="translate(16.597122,-31.143951)">
+       transform="translate(-652.00281,-57.179306)">
       <circle
          style="fill:none;stroke:none;stroke-width:0.264583;stroke-opacity:1"
          id="path1141-1-9-3-3"
@@ -443,7 +438,7 @@
     </g>
     <g
        id="g4785"
-       transform="translate(74.013792,-29.509448)">
+       transform="translate(-594.58614,-55.544803)">
       <g
          id="g1425-9"
          transform="translate(-58.987567,31.494186)">
@@ -542,7 +537,7 @@
     </g>
     <g
        id="g4803"
-       transform="translate(74.240002,-29.892146)">
+       transform="translate(-594.35993,-55.927501)">
       <circle
          style="fill:none;stroke:none;stroke-width:0.264583;stroke-opacity:1"
          id="path1141-1-9-2"
@@ -637,7 +632,7 @@
     </g>
     <g
        id="g3985"
-       transform="translate(-137.24176,73.111322)">
+       transform="translate(-805.8417,47.075967)">
       <g
          id="g3966"
          transform="translate(0,-17.823958)">
@@ -736,7 +731,7 @@
     </g>
     <g
        id="g4923"
-       transform="translate(-99.909318,299.72602)">
+       transform="translate(-768.50925,273.69066)">
       <g
          id="g1425-7"
          transform="translate(177.16888,-109.27461)">
@@ -959,7 +954,7 @@
     </g>
     <g
        id="g4821"
-       transform="translate(-110.63173,63.292725)">
+       transform="translate(-779.23167,37.25737)">
       <circle
          style="fill:none;stroke:none;stroke-width:0.264583;stroke-opacity:1"
          id="path1141-1-9-3-8"
@@ -1054,7 +1049,7 @@
     </g>
     <g
        id="g4839"
-       transform="translate(75.558872,-28.889801)">
+       transform="translate(-593.04106,-54.925156)">
       <circle
          style="fill:none;stroke:none;stroke-width:0.264583;stroke-opacity:1"
          id="path1141-1-9-3-8-3"
@@ -1149,7 +1144,7 @@
     </g>
     <g
        id="g4857"
-       transform="translate(76.814052,-33.152832)">
+       transform="translate(-591.78588,-59.188187)">
       <circle
          style="fill:none;stroke:none;stroke-width:0.264583;stroke-opacity:1"
          id="path1141-1-9-3-8-3-4"
@@ -1244,7 +1239,7 @@
     </g>
     <g
        id="g4876"
-       transform="translate(-111.45869,56.858103)">
+       transform="translate(-780.05863,30.822748)">
       <g
          id="g3246-6"
          transform="translate(78.056699,-1.3616629)">
@@ -1341,10 +1336,5 @@
            x="135.32596"
            y="252.95657">100</tspan></text>
     </g>
-    <text
-       xml:space="preserve"
-       transform="scale(0.26458333)"
-       id="text3791"
-       style="fill:#000000;stroke:none;stroke-opacity:1;-inkscape-font-specification:'Noto Sans';font-family:'Noto Sans';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:96px;fill-opacity:1;white-space:pre;shape-inside:url(#rect3793)" />
   </g>
 </svg>
