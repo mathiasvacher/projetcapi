@@ -89,14 +89,11 @@ Inheritance diagram for gui.CustomDialog:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac5320ca17063c7149c772d0423756f82" id="r_ac5320ca17063c7149c772d0423756f82"><td class="memItemLeft" align="right" valign="top"><a id="ac5320ca17063c7149c772d0423756f82" name="ac5320ca17063c7149c772d0423756f82"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self, parent, title, prompt, options)</td></tr>
+<tr class="memitem:ac5320ca17063c7149c772d0423756f82" id="r_ac5320ca17063c7149c772d0423756f82"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_custom_dialog.html#ac5320ca17063c7149c772d0423756f82">__init__</a> (self, parent, title, prompt, options)</td></tr>
 <tr class="separator:ac5320ca17063c7149c772d0423756f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42b3296f1755696f871d0d981de66fba" id="r_a42b3296f1755696f871d0d981de66fba"><td class="memItemLeft" align="right" valign="top"><a id="a42b3296f1755696f871d0d981de66fba" name="a42b3296f1755696f871d0d981de66fba"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>body</b> (self, parent)</td></tr>
+<tr class="memitem:a42b3296f1755696f871d0d981de66fba" id="r_a42b3296f1755696f871d0d981de66fba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_custom_dialog.html#a42b3296f1755696f871d0d981de66fba">body</a> (self, parent)</td></tr>
 <tr class="separator:a42b3296f1755696f871d0d981de66fba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0397d263fe32d05cecbe55a6f548845e" id="r_a0397d263fe32d05cecbe55a6f548845e"><td class="memItemLeft" align="right" valign="top"><a id="a0397d263fe32d05cecbe55a6f548845e" name="a0397d263fe32d05cecbe55a6f548845e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>apply</b> (self)</td></tr>
+<tr class="memitem:a0397d263fe32d05cecbe55a6f548845e" id="r_a0397d263fe32d05cecbe55a6f548845e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgui_1_1_custom_dialog.html#a0397d263fe32d05cecbe55a6f548845e">apply</a> (self)</td></tr>
 <tr class="separator:a0397d263fe32d05cecbe55a6f548845e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -117,6 +114,143 @@ Public Attributes</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>entry</b></td></tr>
 <tr class="separator:aabc423d51916df0675b123b61e730d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><pre class="fragment">@class CustomDialog
+@brief Custom dialog box for user input.
+
+This class defines a custom dialog box that inherits from tkinter's simpledialog.Dialog.
+It is designed for capturing user input with a prompt.
+
+@details
+The dialog includes a title, prompt, and an entry widget for user input.
+
+@note
+This class is intended for use with the tkinter library.
+
+@section author Author:
+TOUZAIN Romane
+VACHER Mathias
+
+@section date Date:
+04/12/2023
+</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ac5320ca17063c7149c772d0423756f82" name="ac5320ca17063c7149c772d0423756f82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5320ca17063c7149c772d0423756f82">&#9670;&#160;</a></span>__init__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gui.CustomDialog.__init__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>prompt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>options</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">@fn __init__
+@brief Constructor for CustomDialog.
+
+@param parent The parent widget.
+@param title The title of the dialog box.
+@param prompt The prompt displayed to the user.
+@param options Additional options for customization.
+</pre> 
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0397d263fe32d05cecbe55a6f548845e" name="a0397d263fe32d05cecbe55a6f548845e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0397d263fe32d05cecbe55a6f548845e">&#9670;&#160;</a></span>apply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gui.CustomDialog.apply </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">@fn apply
+@brief Apply the user's input.
+
+@details
+Set the result attribute to the user's input.
+</pre> 
+</div>
+</div>
+<a id="a42b3296f1755696f871d0d981de66fba" name="a42b3296f1755696f871d0d981de66fba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42b3296f1755696f871d0d981de66fba">&#9670;&#160;</a></span>body()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gui.CustomDialog.body </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>parent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">@fn body
+@brief Create the dialog body.
+
+@param parent The parent widget.
+
+@details
+- Set the geometry of the dialog.
+- Set the title of the dialog.
+- Display the prompt with a label.
+- Create an entry widget for user input.
+
+@return The entry widget.
+</pre> 
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/Users/mathias/Desktop/Documents/École/Master1/Conception agile de projets informatique/Projet/projetcapi/<b>gui.py</b></li>
 </ul>

@@ -5,13 +5,58 @@ from rules import Rules
 import json
 
 class CustomDialog(simpledialog.Dialog):
+    """
+    @class CustomDialog
+    @brief Custom dialog box for user input.
+
+    This class defines a custom dialog box that inherits from tkinter's simpledialog.Dialog.
+    It is designed for capturing user input with a prompt.
+
+    @details
+    The dialog includes a title, prompt, and an entry widget for user input.
+
+    @note
+    This class is intended for use with the tkinter library.
+
+    @section author Author:
+    TOUZAIN Romane
+    VACHER Mathias
+
+    @section date Date:
+    04/12/2023
+    """
+        
     def __init__(self, parent, title, prompt, options):
+        """
+        @fn __init__
+        @brief Constructor for CustomDialog.
+
+        @param parent The parent widget.
+        @param title The title of the dialog box.
+        @param prompt The prompt displayed to the user.
+        @param options Additional options for customization.
+        """
+
         self.options = options
         self.result = None
         self.prompt = prompt  # Ajout de la variable prompt
         super().__init__(parent, title=title)
 
     def body(self, parent):
+        """
+        @fn body
+        @brief Create the dialog body.
+
+        @param parent The parent widget.
+
+        @details
+        - Set the geometry of the dialog.
+        - Set the title of the dialog.
+        - Display the prompt with a label.
+        - Create an entry widget for user input.
+
+        @return The entry widget.
+        """
         self.geometry("300x100")
         self.title(self.title)
         tk.Label(parent, text=self.prompt, anchor="w").pack(side="top", fill="x")  # Utilisation de self.prompt
@@ -20,9 +65,42 @@ class CustomDialog(simpledialog.Dialog):
         return self.entry
 
     def apply(self):
+        """
+        @fn apply
+        @brief Apply the user's input.
+
+        @details
+        Set the result attribute to the user's input.
+        """
         self.result = self.entry.get()
 
 def start_gui(planning_poker):
+    """
+    @fn start_gui
+    @brief Start the graphical user interface for the Planning Poker application.
+
+    @param planning_poker An instance of the PlanningPoker class.
+
+    @details
+    - Creates and configures the main application window.
+    - Gathers information about the number of players, player names, and rules.
+    - Manages the flow of the Planning Poker session, including voting and task completion.
+    - Displays task information, player names, and voting cards.
+    - Provides a summary of evaluated tasks at the end of the session.
+
+    @note
+    This function uses tkinter for GUI components.
+
+    @section author Author:
+    TOUZAIN Romane
+    VACHER Mathias
+
+    @section date Date:
+    04/12/2023
+
+    @param planning_poker An instance of the PlanningPoker class.
+    """
+
     root = tk.Tk()
     root.title("Planning Poker")
 
@@ -114,9 +192,27 @@ def start_gui(planning_poker):
         root.destroy()  # Fermez l'application après avoir affiché le récapitulatif
 
     def show_current_task():
+        """
+        @fn show_current_task
+        @brief Display information about the current task.
+
+        @details
+        Updates the label with the name and description of the current task.
+        """
         task_label.config(text=f"Tâche actuelle : {planning_poker.current_task['nom']} - {planning_poker.current_task['description']}")
 
     def show_cards(players):
+        """
+        @fn show_cards
+        @brief Display voting cards for each player.
+
+        @param players List of player names.
+
+        @details
+        - Creates a frame to display voting cards for each player.
+        - Uses buttons to represent available voting options.
+        - Calls the on_card_selected function when a card is selected.
+        """
         # Créer un cadre pour afficher les cartes
         cards_frame = tk.Frame(root)
         cards_frame.pack()

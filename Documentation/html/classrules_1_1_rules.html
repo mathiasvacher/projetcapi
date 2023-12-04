@@ -83,14 +83,11 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa8b54e3f244873b39e0434de616b0727" id="r_aa8b54e3f244873b39e0434de616b0727"><td class="memItemLeft" align="right" valign="top"><a id="aa8b54e3f244873b39e0434de616b0727" name="aa8b54e3f244873b39e0434de616b0727"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self, mode)</td></tr>
+<tr class="memitem:aa8b54e3f244873b39e0434de616b0727" id="r_aa8b54e3f244873b39e0434de616b0727"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrules_1_1_rules.html#aa8b54e3f244873b39e0434de616b0727">__init__</a> (self, mode)</td></tr>
 <tr class="separator:aa8b54e3f244873b39e0434de616b0727"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac494fe5c4ddbb84615c7fb83ecffbba8" id="r_ac494fe5c4ddbb84615c7fb83ecffbba8"><td class="memItemLeft" align="right" valign="top"><a id="ac494fe5c4ddbb84615c7fb83ecffbba8" name="ac494fe5c4ddbb84615c7fb83ecffbba8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>validate_vote</b> (self, votes)</td></tr>
+<tr class="memitem:ac494fe5c4ddbb84615c7fb83ecffbba8" id="r_ac494fe5c4ddbb84615c7fb83ecffbba8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrules_1_1_rules.html#ac494fe5c4ddbb84615c7fb83ecffbba8">validate_vote</a> (self, votes)</td></tr>
 <tr class="separator:ac494fe5c4ddbb84615c7fb83ecffbba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a017c13ab7d6df97b8fa924a639891577" id="r_a017c13ab7d6df97b8fa924a639891577"><td class="memItemLeft" align="right" valign="top"><a id="a017c13ab7d6df97b8fa924a639891577" name="a017c13ab7d6df97b8fa924a639891577"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>calculate_difficulty</b> (self, votes)</td></tr>
+<tr class="memitem:a017c13ab7d6df97b8fa924a639891577" id="r_a017c13ab7d6df97b8fa924a639891577"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrules_1_1_rules.html#a017c13ab7d6df97b8fa924a639891577">calculate_difficulty</a> (self, votes)</td></tr>
 <tr class="separator:a017c13ab7d6df97b8fa924a639891577"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -99,6 +96,125 @@ Public Attributes</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>mode</b></td></tr>
 <tr class="separator:a0ab1f79daa80d15201ebe2336ced794f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><pre class="fragment">@class Rules
+@brief Class defining the rules for calculating task difficulty based on votes.
+
+@details
+The Rules class provides different methods for validating votes and calculating task difficulty.
+The available modes include "strict," "moyenne," "médiane," and "majorité."
+
+@note
+This class is intended for use with the PlanningPoker class.
+
+@section author Author:
+TOUZAIN Romane
+VACHER Mathias
+
+@section date Date:
+Specify the creation or last modification date.
+</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aa8b54e3f244873b39e0434de616b0727" name="aa8b54e3f244873b39e0434de616b0727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8b54e3f244873b39e0434de616b0727">&#9670;&#160;</a></span>__init__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rules.Rules.__init__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">@fn __init__
+@brief Constructor for Rules.
+
+@param mode The mode for voting rules ("strict," "moyenne," "médiane," or "majorité").
+</pre> 
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a017c13ab7d6df97b8fa924a639891577" name="a017c13ab7d6df97b8fa924a639891577"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a017c13ab7d6df97b8fa924a639891577">&#9670;&#160;</a></span>calculate_difficulty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rules.Rules.calculate_difficulty </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>votes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">@fn calculate_difficulty
+@brief Calculate the task difficulty based on votes.
+
+@param votes List of votes from players.
+
+@return Calculated difficulty based on the selected mode.
+</pre> 
+</div>
+</div>
+<a id="ac494fe5c4ddbb84615c7fb83ecffbba8" name="ac494fe5c4ddbb84615c7fb83ecffbba8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac494fe5c4ddbb84615c7fb83ecffbba8">&#9670;&#160;</a></span>validate_vote()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rules.Rules.validate_vote </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>votes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">@fn validate_vote
+@brief Validate the votes based on the selected mode.
+
+@param votes List of votes from players.
+
+@return True if the votes are valid according to the selected mode, False otherwise.
+</pre> 
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/Users/mathias/Desktop/Documents/École/Master1/Conception agile de projets informatique/Projet/projetcapi/<b>rules.py</b></li>
 </ul>
