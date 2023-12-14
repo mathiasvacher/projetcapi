@@ -1,6 +1,6 @@
 # gui.py (mise à jour)
 import tkinter as tk
-from tkinter import simpledialog, messagebox
+from tkinter import simpledialog, messagebox, IntVar
 from rules import Rules
 import json
 
@@ -57,12 +57,14 @@ class CustomDialog(simpledialog.Dialog):
 
         @return The entry widget.
         """
-        self.geometry("300x100")
+        self.geometry("300x150")
         self.title(self.title)
         tk.Label(parent, text=self.prompt, anchor="w").pack(side="top", fill="x")  # Utilisation de self.prompt
-        self.entry = tk.Entry(parent)
-        self.entry.pack(side="top", fill="x")
-        return self.entry
+
+        # Utilisez des boutons radio pour choisir les règles
+        self.var = IntVar()
+        for i, option in enumerate(self.options):
+            tk.Radiobutton(parent, text=option, variable=self.var, value=i).pack(anchor="w")
 
     def apply(self):
         """
@@ -72,7 +74,7 @@ class CustomDialog(simpledialog.Dialog):
         @details
         Set the result attribute to the user's input.
         """
-        self.result = self.entry.get()
+        self.result = self.options[self.var.get()]
 
 def start_gui(planning_poker):
     """
@@ -100,12 +102,16 @@ def start_gui(planning_poker):
 
     @param planning_poker An instance of the PlanningPoker class.
     """
+    
+    # Ajoutez la déclaration de rules_options ici
+    rules_options = ["strict", "moyenne", "médiane", "majorité"]
 
     root = tk.Tk()
     root.title("Planning Poker")
 
     def get_num_players():
         return simpledialog.askinteger("Nombre de joueurs", "Entrez le nombre de joueurs :", minvalue=1)
+
 
     def get_player_names(num_players):
         names = []
@@ -115,14 +121,15 @@ def start_gui(planning_poker):
         return names
 
     def get_rules():
-        rules_options = ["strict", "moyenne", "médiane", "majorité"]
-        rules = CustomDialog(root, "Règles", "Choisissez les règles (strict, moyenne, médiane, majorité) :", rules_options).result
-        return rules
+        # Utilisez la nouvelle boîte de dialogue pour choisir les règles
+        dialog = CustomDialog(root, "Règles", "Choisissez les règles :", rules_options)
+        return dialog.result
 
     num_players = get_num_players()
     player_names = get_player_names(num_players)
 
     planning_poker.players = player_names
+    # Utilisez la règle sélectionnée dans le jeu
     rules = Rules(get_rules())
     planning_poker.rules = rules
     planning_poker.current_task = planning_poker.get_next_task()
@@ -134,7 +141,7 @@ def start_gui(planning_poker):
     player_name_label.pack()
 
     next_task_button_text = tk.StringVar()
-    next_task_button_text.set("Récapitulatif")  
+    next_task_button_text.set("Récapitulatif accessible en fin de partie")  
 
     def on_card_selected(value, player):
         planning_poker.record_vote(player, value)
@@ -147,7 +154,7 @@ def start_gui(planning_poker):
             planning_poker.complete_current_task()
             show_current_task()
             show_player_name(planning_poker.get_next_player())
-            show_cards(planning_poker.players)
+            show_cards()  # Correction : Supprimez l'argument planning_poker.players
         else:
             messagebox.showinfo("Vote invalide", "Le vote n'est pas valide. Recommencez le vote.")
             planning_poker.reset_votes()
@@ -168,16 +175,16 @@ def start_gui(planning_poker):
 
     def on_next_task_button_click():
         planning_poker.reset_votes()
-        planning_poker.complete_current_task()  # Mettez à jour la tâche actuelle avant de passer à la suivante
+        planning_poker.complete_current_task()
         next_task = planning_poker.get_next_task()
         if next_task:
             planning_poker.current_task = next_task
             show_current_task()
             show_player_name(planning_poker.get_next_player())
-            show_cards(planning_poker.players)
-            if not next_task:  # Si c'est la dernière tâche
-                next_task_button_text.set("Récapitulatif")  # Changer le texte du bouton
-                root.update_idletasks()  # Forcer la mise à jour immédiate de l'interface utilisateur
+            show_cards()  # Correction : Supprimez l'argument planning_poker.players
+            if not next_task:
+                next_task_button_text.set("Récapitulatif")
+                root.update_idletasks()
         else:
             show_summary()
 
@@ -201,30 +208,27 @@ def start_gui(planning_poker):
         """
         task_label.config(text=f"Tâche actuelle : {planning_poker.current_task['nom']} - {planning_poker.current_task['description']}")
 
-    def show_cards(players):
-        """
-        @fn show_cards
-        @brief Display voting cards for each player.
-
-        @param players List of player names.
-
-        @details
-        - Creates a frame to display voting cards for each player.
-        - Uses buttons to represent available voting options.
-        - Calls the on_card_selected function when a card is selected.
-        """
+    def show_cards():
         # Créer un cadre pour afficher les cartes
         cards_frame = tk.Frame(root)
         cards_frame.pack()
 
-        for player in players:
-            card_label = tk.Label(cards_frame, text=f"Carte de {player} :")
-            card_label.pack(side="left", padx=5)
+        # Afficher les cartes pour chaque joueur
+        card_label = tk.Label(cards_frame, text=f"Carte unique pour la tâche {planning_poker.current_task['nom']} :")
+        card_label.pack(side="left", padx=5)
 
-            # Afficher les cartes (à compléter avec votre propre logique)
-            for card_value in planning_poker.get_available_cards():
-                card_button = tk.Button(cards_frame, text=str(card_value), command=lambda value=card_value, player=player: on_card_selected(value, player))
-                card_button.pack(side="left", padx=5)
+        # Afficher les cartes (à compléter avec votre propre logique)
+        for card_value in planning_poker.get_available_cards():
+            card_button = tk.Button(cards_frame, text=str(card_value), command=lambda value=card_value: on_card_selected(value))
+            card_button.pack(side="left", padx=5)
+
+    def on_card_selected(value):
+        # Changer la logique pour gérer la sélection de carte par le joueur actuel
+        player = planning_poker.get_next_player()
+        planning_poker.record_vote(player, value)
+        show_player_name(planning_poker.get_next_player())
+        if planning_poker.is_voting_complete():
+            validate_and_next_task()
 
     def show_player_name(player_name):
         player_name_label.config(text=f"Au tour de : {player_name}")
@@ -234,6 +238,6 @@ def start_gui(planning_poker):
 
     show_current_task()
     show_player_name(planning_poker.get_next_player())
-    show_cards(planning_poker.players)
+    show_cards()
 
     root.mainloop()
