@@ -214,7 +214,7 @@ def start_gui(planning_poker):
         cards_frame.pack()
 
         # Afficher les cartes pour chaque joueur
-        card_label = tk.Label(cards_frame, text=f"Carte unique pour la tâche {planning_poker.current_task['nom']} :")
+        card_label = tk.Label(cards_frame, text=f"Cartes uniques pour la tâche {planning_poker.current_task['nom']} :")
         card_label.pack(side="left", padx=5)
 
         # Afficher les cartes (à compléter avec votre propre logique)
