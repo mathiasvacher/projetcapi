@@ -96,7 +96,7 @@ class PlanningPoker:
 
         @return List of available voting cards.
         """
-        return [0, 1, 2, 3, 5, 8, 13, 20, 40, 100]
+        return [0, 1, 2, 3, 5, 8, 13, 20, 40, 100, "?", "Café"]
 
     def reset_votes(self):
         """
