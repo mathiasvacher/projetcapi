@@ -3,19 +3,19 @@
       {
           "id": 1,
           "nom": "Tache 1",
-          "description": "Description de la tache 1",
+          "description": "Faire le projet de CAPI (update : mon dieu pourquoi on a choisi Python)",
           "difficulte": "0"
       },
       {
           "id": 2,
           "nom": "Tache 2",
-          "description": "Description de la tache 2",
+          "description": "Réviser le DS de réseau (update : j'ai maximum 2)",
           "difficulte": "0"
       },
       {
           "id": 3,
           "nom": "Tache 3",
-          "description": "Description de la tache 3",
+          "description": "Survivre aux repas de noël (update : à venir)",
           "difficulte": "0"
       }
   ]
