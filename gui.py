@@ -110,10 +110,24 @@ def start_gui(planning_poker):
     root.title("Planning Poker")
 
     def get_num_players():
+        """
+        @fn get_num_players
+        @brief gets and asks how many players should vote 
+
+        @details
+        Asks the users to input how many players are playing, with a min value of 1
+        """
         return simpledialog.askinteger("Nombre de joueurs", "Entrez le nombre de joueurs :", minvalue=1)
 
 
     def get_player_names(num_players):
+        """
+        @fn get_player_names
+        @brief gets and asks player's names
+
+        @details
+        Asks the users to input the names of the players 
+        """
         names = []
         for i in range(num_players):
             name = simpledialog.askstring("Nom du joueur", f"Nom du joueur {i + 1} :")
@@ -121,6 +135,13 @@ def start_gui(planning_poker):
         return names
 
     def get_rules():
+        """
+        @fn get_rules
+        @brief gets and asks the rules that want to get played
+
+        @details
+        Asks the users to input the rules he wants to play with 
+        """
         # Utilisez la nouvelle boîte de dialogue pour choisir les règles
         dialog = CustomDialog(root, "Règles", "Choisissez les règles :", rules_options)
         return dialog.result
@@ -144,12 +165,26 @@ def start_gui(planning_poker):
     next_task_button_text.set("Récapitulatif accessible en fin de partie")  
 
     def on_card_selected(value, player):
+        """
+        @fn on_card_selected
+        @brief reacts based on what card the player selected
+
+        @details
+        if the vote is ok according to the rule, next player gets to vode, otherwise it asks the players to replay
+        """
         planning_poker.record_vote(player, value)
         show_player_name(planning_poker.get_next_player())
         if planning_poker.is_voting_complete():
             validate_and_next_task()
 
     def validate_and_next_task():
+        """
+        @fn validate_and_next_task
+        @brief validate the player's vote
+
+        @details
+        if the vote is ok according to the rule, next player gets to vode, otherwise it asks the players to replay
+        """
         if planning_poker.rules.validate_vote(planning_poker.get_votes()):
             planning_poker.complete_current_task()
             show_current_task()
@@ -161,6 +196,13 @@ def start_gui(planning_poker):
             show_current_task()
 
     def save_result_to_backlog():
+        """
+        @fn save_result_to_backlog
+        @brief saves the results of the vote to the backlog.json file
+
+        @details
+        saves the results of the vote to the backlog.json file
+        """
         with open('backlog.json', 'r') as f:
             backlog = json.load(f)
 
@@ -189,6 +231,13 @@ def start_gui(planning_poker):
             show_summary()
 
     def show_summary():
+        """
+        @fn show_summary
+        @brief show a page containing all the votes and tasks with their corresponding difficulty after the vote
+
+        @details
+        show a page containing all the votes and tasks with their corresponding difficulty after the vote
+        """
         summary = "\nRécapitulatif des tâches évaluées :\n"
         for task in planning_poker.evaluated_tasks:  # Utilisez evaluated_tasks au lieu de tasks
             summary += f"Tâche : {task['nom']}\n"
@@ -209,6 +258,13 @@ def start_gui(planning_poker):
         task_label.config(text=f"Tâche actuelle : {planning_poker.current_task['nom']} - {planning_poker.current_task['description']}")
 
     def show_cards():
+        """
+        @fn show_cards
+        @brief displays the cards on the window
+
+        @details
+        display all the xcards on the window as buttons
+        """
         # Créer un cadre pour afficher les cartes
         cards_frame = tk.Frame(root)
         cards_frame.pack()
@@ -223,6 +279,13 @@ def start_gui(planning_poker):
             card_button.pack(side="left", padx=5)
 
     def on_card_selected(value):
+        """
+        @fn on_card_selected
+        @brief handles all the work after a player votes
+
+        @details
+        handles all the work after a player votes (next player that has to vote, updates the current task on the top of the screen)
+        """
         # Changer la logique pour gérer la sélection de carte par le joueur actuel
         player = planning_poker.get_next_player()
         planning_poker.record_vote(player, value)
@@ -231,6 +294,13 @@ def start_gui(planning_poker):
             validate_and_next_task()
 
     def show_player_name(player_name):
+        """
+        @fn show_player_name
+        @brief Displays information about the player that has to vote
+
+        @details
+        Displays information about the player that has to vote
+        """
         player_name_label.config(text=f"Au tour de : {player_name}")
 
     next_task_button = tk.Button(root, textvariable=next_task_button_text, command=on_next_task_button_click)
