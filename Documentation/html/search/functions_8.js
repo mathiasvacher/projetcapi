@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['save_5fbacklog_0',['save_backlog',['../classplanning__poker_1_1_planning_poker.html#a3559df86f8521c3b1c31102dfaee2399',1,'planning_poker::PlanningPoker']]]
+  ['record_5fvote_0',['record_vote',['../classplanning__poker_1_1_planning_poker.html#a811c5e715594382d58be5c1ef3b4da0d',1,'planning_poker::PlanningPoker']]],
+  ['reset_5fvotes_1',['reset_votes',['../classplanning__poker_1_1_planning_poker.html#aca68d0308a6ddc058f843b2260add9dd',1,'planning_poker::PlanningPoker']]]
 ];

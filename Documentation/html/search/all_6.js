@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['load_5fbacklog_0',['load_backlog',['../classplanning__poker_1_1_planning_poker.html#adb5f9ef50b3e8ed1054570b9346522e1',1,'planning_poker::PlanningPoker']]]
+  ['is_5fvoting_5fcomplete_0',['is_voting_complete',['../classplanning__poker_1_1_planning_poker.html#a655131791ad7baf753471489b4b6ee00',1,'planning_poker::PlanningPoker']]]
 ];
