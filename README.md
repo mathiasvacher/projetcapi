@@ -4,7 +4,7 @@ Projet en binôme de conception agile de projets informatiques
 Comment lancer le programme : 
 Avant de tester le programme, assurez vous d'avoir toutes les libraires nécessaires installées sur votre machine.
 
-Nous n'utilisonsq ue très peu de librairies, la principale étant Tkinter. Si vous l'avez installée sur votre machine, le projet devrait s'executer sans problème.
+Nous n'utilisons que très peu de librairies, la principale étant Tkinter. Si vous l'avez installée sur votre machine, le projet devrait s'executer sans problème.
 
 Après avoir cloné le projet github, vous devez simplement executer le fichier "main.py". De là, une fenêtre devrait s'ouvrir et vous n'aurez qu'à suivre les indications.
 Si vous souhaitez modifier les tâches, nous vous invitons à aller dans le fichier "backlog.json" et à les modifier en respectant bien le format des tâches pré-existantes. 
